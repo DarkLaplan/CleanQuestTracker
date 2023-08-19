@@ -10,9 +10,9 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddEmailSender(this IServiceCollection serviceCollection, IConfigurationRoot configuration)
     {
         serviceCollection.TryAddScoped<INotificationSender, EmailNotificationSender>();
+        serviceCollection.Configure<EmailSenderSettings>(configuration.GetSection(typeof(EmailSenderSettings).FullName 
+            ?? throw new Exception($"Incorrect parameter name for class {nameof(EmailSenderSettings)}.")));
 
-        var test = typeof(EmailSenderSettings).FullName;
-        serviceCollection.Configure<EmailSenderSettings>(configuration.GetSection(test));
         return serviceCollection;
     }
 }

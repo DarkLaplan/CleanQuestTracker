@@ -3,6 +3,8 @@ using CleanQuestTracker.Backend.Notifications.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Serilog;
 using System;
 
 // DI services registration.
@@ -26,6 +28,10 @@ async Task AppStartup()
 
     var configuration = builder.Build();
 
+    Log.Logger = new LoggerConfiguration()
+        .ReadFrom.Configuration(configuration)
+        .CreateLogger();
+
     using IHost hostBuilder = Host.CreateDefaultBuilder()
         .UseDefaultServiceProvider((context, options) =>
         {
@@ -35,9 +41,11 @@ async Task AppStartup()
         {
             services.AddEmailSender(configuration);
         })
+        .UseSerilog()
         .Build();
 
     var notificationSender = ActivatorUtilities.GetServiceOrCreateInstance<INotificationSender>(hostBuilder.Services);
+
     var testNotification = new Notification
     {
         Message = "Kokote trva ti to dlouho.",
