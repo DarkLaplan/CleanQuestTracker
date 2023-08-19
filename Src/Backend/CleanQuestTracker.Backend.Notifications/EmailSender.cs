@@ -1,5 +1,6 @@
 ﻿using CleanQuestTracker.Backend.Notifications.Models;
 using MailKit.Net.Smtp;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MimeKit;
 
@@ -7,10 +8,12 @@ namespace CleanQuestTracker.Backend.Notifications;
 
 public sealed class EmailNotificationSender : INotificationSender
 {
+    private readonly ILogger _logger;
     private readonly IOptions<EmailSenderSettings> _emailSenderOptions;
 
-    public EmailNotificationSender(IOptions<EmailSenderSettings> emailSenderOptions)
+    public EmailNotificationSender(ILogger logger, IOptions<EmailSenderSettings> emailSenderOptions)
     {
+        _logger = logger;
         _emailSenderOptions = emailSenderOptions;
     }
 
@@ -29,6 +32,7 @@ public sealed class EmailNotificationSender : INotificationSender
         using var client = new SmtpClient();
         try
         {
+            
             await client.ConnectAsync(_emailSenderOptions.Value.SmtpServer, _emailSenderOptions.Value.SmtpPort, false);
 
             // Note: only needed if the SMTP server requires authentication
@@ -38,6 +42,7 @@ public sealed class EmailNotificationSender : INotificationSender
         }
         catch (Exception ex)
         {
+            _logger.LogError(ex, "Email sending attempt failed unexpectedly");
             return false;
         }
 
