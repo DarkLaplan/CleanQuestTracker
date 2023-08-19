@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{6B8FC311-34C2-445D-96F4-DB79B8AA85EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{70F509B2-D78C-4399-870C-C1B10BE9C58A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{4F8D9964-110F-4677-A9F1-565EF6BE5D9F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanQuestTracker.Client.Console", "Src\Client\CleanQuestTracker.Client.Console\CleanQuestTracker.Client.Console.csproj", "{E4CC2ABE-326B-423E-B7D5-257A5BEBA664}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{AB9536CF-318E-4C3B-BBC0-CF3E5AA229FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanQuestTracker.Backend.Notifications", "Src\Backend\CleanQuestTracker.Backend.Notifications\CleanQuestTracker.Backend.Notifications.csproj", "{1670E272-FB46-4379-B51E-CBA75CB636A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4CC2ABE-326B-423E-B7D5-257A5BEBA664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4CC2ABE-326B-423E-B7D5-257A5BEBA664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4CC2ABE-326B-423E-B7D5-257A5BEBA664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4CC2ABE-326B-423E-B7D5-257A5BEBA664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1670E272-FB46-4379-B51E-CBA75CB636A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1670E272-FB46-4379-B51E-CBA75CB636A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1670E272-FB46-4379-B51E-CBA75CB636A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1670E272-FB46-4379-B51E-CBA75CB636A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4F8D9964-110F-4677-A9F1-565EF6BE5D9F} = {6B8FC311-34C2-445D-96F4-DB79B8AA85EF}
+		{E4CC2ABE-326B-423E-B7D5-257A5BEBA664} = {4F8D9964-110F-4677-A9F1-565EF6BE5D9F}
+		{AB9536CF-318E-4C3B-BBC0-CF3E5AA229FE} = {6B8FC311-34C2-445D-96F4-DB79B8AA85EF}
+		{1670E272-FB46-4379-B51E-CBA75CB636A1} = {AB9536CF-318E-4C3B-BBC0-CF3E5AA229FE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F4553D7-A099-439A-AD38-E17D0475242E}
+	EndGlobalSection
+EndGlobal
