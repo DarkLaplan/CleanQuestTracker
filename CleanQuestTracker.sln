@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{AB95
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanQuestTracker.Backend.Notifications", "Src\Backend\CleanQuestTracker.Backend.Notifications\CleanQuestTracker.Backend.Notifications.csproj", "{1670E272-FB46-4379-B51E-CBA75CB636A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanQuestTracker.Backend.Notifications.Tests", "Tests\Backend\CleanQuestTracker.Backend.Notifications.Tests\CleanQuestTracker.Backend.Notifications.Tests.csproj", "{C12148EE-CA42-400E-9A1F-743E9D3D4EAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{1670E272-FB46-4379-B51E-CBA75CB636A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1670E272-FB46-4379-B51E-CBA75CB636A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1670E272-FB46-4379-B51E-CBA75CB636A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C12148EE-CA42-400E-9A1F-743E9D3D4EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C12148EE-CA42-400E-9A1F-743E9D3D4EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C12148EE-CA42-400E-9A1F-743E9D3D4EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C12148EE-CA42-400E-9A1F-743E9D3D4EAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +44,7 @@ Global
 		{E4CC2ABE-326B-423E-B7D5-257A5BEBA664} = {4F8D9964-110F-4677-A9F1-565EF6BE5D9F}
 		{AB9536CF-318E-4C3B-BBC0-CF3E5AA229FE} = {6B8FC311-34C2-445D-96F4-DB79B8AA85EF}
 		{1670E272-FB46-4379-B51E-CBA75CB636A1} = {AB9536CF-318E-4C3B-BBC0-CF3E5AA229FE}
+		{C12148EE-CA42-400E-9A1F-743E9D3D4EAC} = {70F509B2-D78C-4399-870C-C1B10BE9C58A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F4553D7-A099-439A-AD38-E17D0475242E}
