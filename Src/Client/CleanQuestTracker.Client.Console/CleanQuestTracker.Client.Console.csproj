@@ -5,6 +5,9 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    
     <UserSecretsId>5f742c3b-b86d-4785-a78b-884ce9066d55</UserSecretsId>
   </PropertyGroup>
 

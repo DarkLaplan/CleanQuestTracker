@@ -6,22 +6,31 @@ using MimeKit;
 
 namespace CleanQuestTracker.Backend.Notifications;
 
+/// <summary>
+/// Email notification sender. 
+/// </summary>
 public sealed class EmailNotificationSender : INotificationSender
 {
-    private readonly ILogger _logger;
+    private readonly ILogger<EmailNotificationSender> _logger;
     private readonly IOptions<EmailSenderSettings> _emailSenderOptions;
 
-    public EmailNotificationSender(ILogger logger, IOptions<EmailSenderSettings> emailSenderOptions)
+    /// <summary>
+    /// Initializes a new instance of the <see cref="EmailNotificationSender"/> class.
+    /// </summary>
+    /// <param name="logger">Logger.</param>
+    /// <param name="emailSenderOptions"></param>
+    public EmailNotificationSender(ILogger<EmailNotificationSender> logger, IOptions<EmailSenderSettings> emailSenderOptions)
     {
         _logger = logger;
         _emailSenderOptions = emailSenderOptions;
     }
 
+    /// <inheritdoc />
     public async Task<bool> SendNotificationAsync(Notification notification)
     {
         var message = new MimeMessage();
         message.From.Add(new MailboxAddress(_emailSenderOptions.Value.SenderName, _emailSenderOptions.Value.SenderEmailAddress));
-        message.To.Add(new MailboxAddress(notification.User.Name, notification.User.Email));
+        message.To.Add(new MailboxAddress(notification.User?.Name, notification.User?.Email));
         message.Subject = notification.NotificationType;
 
         message.Body = new TextPart("plain")
