@@ -1,9 +1,5 @@
 name: DocFx
 
-on:
-  push:
-    branches: [ "personal" ]
-
 jobs:
   publish-docs:
     runs-on: ubuntu-latest
