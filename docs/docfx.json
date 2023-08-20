@@ -4,8 +4,9 @@
       "src": [
         {
           "files": [
-            "bin/**/*.dll"
-          ]
+            "**/**/bin/**/**/CleanQuestTracker*.dll"
+          ],
+          "src": "../Src/"
         }
       ],
       "dest": "api",
