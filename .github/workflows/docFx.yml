@@ -1,3 +1,5 @@
+name: DocFx
+on: push
 jobs:
   publish-docs:
     runs-on: ubuntu-latest
